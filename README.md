@@ -36,7 +36,6 @@ The website is developed with the help of the following resources:
 
 - [Bootstrap](https://getbootstrap.com): A popular front-end framework for building responsive and mobile-first websites.
 - [FontAwesome](https://fontawesome.com): An iconic font and CSS toolkit for adding scalable icons to your web projects.
-- [Unsplash](https://unsplash.com): A platform providing high-quality, royalty-free images for use in web projects.
 
 ## License
 
