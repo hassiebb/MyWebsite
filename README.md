@@ -1,4 +1,4 @@
-# Resume Website
+# My Resume Website
 
 This repository contains the source code for my personal resume website. The website is developed using HTML, CSS, JavaScript, and the Bootstrap framework. It serves as a platform to showcase my skills, projects, and provide insights into my personality.
 
