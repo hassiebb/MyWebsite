@@ -43,6 +43,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 ## Contact
 
-For any inquiries or suggestions, please feel free to reach out to me through the contact form on the website or by email at [mohamamdhassieb@gmail.com](mailto:mohamamdhassieb@gmail.com).
+For any inquiries or suggestions, please feel free to reach out to me by email at [mohamamdhassieb@gmail.com](mailto:mohamamdhassieb@gmail.com) or at instagram [mhassieb_](https://www.instagram.com/mhassieb_/).
 
 Thank you for visiting my resume website repository!
