@@ -2,6 +2,8 @@
 
 This repository contains the source code for my personal resume website. The website is developed using HTML, CSS, JavaScript, and the Bootstrap framework. It serves as a platform to showcase my skills, projects, and provide insights into my personality.
 
+![My website.png](https://github.com/hassiebb/MyWebsite/blob/main/assets/img/My%20website.png)
+
 ## Features
 
 - **Responsive Design**: The website is designed to be responsive, ensuring optimal viewing experience across different devices and screen sizes.
