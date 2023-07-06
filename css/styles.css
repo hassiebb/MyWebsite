@@ -53,19 +53,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-hr {
-  margin: 1rem 0;
-  color: inherit;
-  background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
-}
 
-hr:not([size]) {
-  height: 1px;
-}
-
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -4150,16 +4139,7 @@ body {
   }
 }
 h1, .h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+h2, .h2{
   text-transform: uppercase;
 }
 
