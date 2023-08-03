@@ -793,8 +793,6 @@ button:focus:not(:focus-visible) {
   color: #fff;
 }
 
-
-
 .page-link {
   position: relative;
   display: block;
