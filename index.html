@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Mohammad Hassieb - Software Engineer & Creative Professional" />
+  <meta name="description" content="Mohammad Hassieb - SAP Developer, Frontend Developer & Creative Professional" />
   <meta name="author" content="Mohammad Hassieb" />
   <title>Mohammad Hassieb | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
@@ -11,25 +11,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet" />
   <link href="css/portfolio.css" rel="stylesheet" />
 </head>
 <body id="page-top">
-  <!-- Top Bar: Dark Mode + Section Switcher -->
+  <!-- Top Bar -->
   <header class="portfolio-header">
     <div class="header-inner">
       <a href="#about" class="logo-link">
-        <span class="logo-name">Mohammad Hassieb</span>
+        <span class="logo-name">Mohammad Hassieb's Portfolio</span>
       </a>
       <nav class="header-nav">
         <div class="section-tabs" role="tablist">
           <button class="section-tab active" data-section="tech" role="tab" aria-selected="true">
             <i class="fas fa-code"></i>
-            <span>Tech</span>
+            <span class="section-tab-label">Tech</span>
           </button>
           <button class="section-tab" data-section="creative" role="tab" aria-selected="false">
             <i class="fas fa-palette"></i>
-            <span>Creative</span>
+            <span class="section-tab-label">Creative</span>
           </button>
         </div>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -47,10 +46,12 @@
     </a>
     <nav class="sidebar-nav">
       <a class="sidebar-link active" href="#about">About</a>
-      <a class="sidebar-link" href="#experience">Experience</a>
-      <a class="sidebar-link" href="#education">Education</a>
       <a class="sidebar-link" href="#skills">Skills</a>
       <a class="sidebar-link" href="#projects">Projects</a>
+      <a class="sidebar-link" href="#experience">Experience</a>
+      <a class="sidebar-link" href="#education">Education</a>
+      <a class="sidebar-link sidebar-link-extra" href="#achievements" data-creative-only>Achievements</a>
+      <a class="sidebar-link" href="#contact">Contact</a>
     </nav>
     <div class="sidebar-social">
       <a class="social-icon" href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -64,126 +65,150 @@
     </a>
   </aside>
 
-  <!-- Mobile Nav Toggle -->
   <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open menu">
     <i class="fas fa-bars"></i>
   </button>
 
-  <!-- Mobile Overlay -->
   <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
 
-  <!-- Main Content -->
   <main class="portfolio-main">
     <!-- Tech Section -->
     <div class="portfolio-section active" id="techSection" role="tabpanel">
-      <section class="resume-section" id="about">
-        <div class="resume-section-content">
-          <span class="section-badge tech-badge">Tech</span>
-          <h1>Mohammad <span class="text-accent">Hassieb</span></h1>
-          <p class="subheading">
-            Software Engineer & Developer<br>
-            <span class="location">Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo</span><br>
-            <a href="tel:+2001211494107">+20 01211494107</a> ·
-            <a href="mailto:mohammadhassieb@gmail.com">mohammadhassieb@gmail.com</a>
-          </p>
-          <p class="lead" data-content="tech-about">Loading...</p>
-          <div class="social-icons d-lg-none">
-            <a class="social-icon" href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a class="social-icon" href="https://github.com/hassiebb" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a class="social-icon" href="https://wa.link/fthmku" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a class="social-icon" href="https://www.instagram.com/mhassieb_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a class="social-icon" href="assets/img/Mohammad Hassieb resume.pdf" download aria-label="Download CV"><i class="fas fa-download"></i></a>
+      <section class="resume-section hero-section" id="about">
+        <div class="resume-section-content hero-content">
+          <div class="hero-photo-wrap hero-mobile-only">
+            <img class="hero-photo" src="assets/img/My photo.png" alt="Mohammad Hassieb" />
           </div>
-        </div>
-      </section>
-
-      <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <h2>Experience</h2>
-          <div id="tech-experience"><!-- Filled by JS --></div>
-        </div>
-      </section>
-
-      <section class="resume-section" id="education">
-        <div class="resume-section-content">
-          <h2>Education</h2>
-          <div id="tech-education"><!-- Filled by JS --></div>
+          <div class="hero-text">
+            <span class="section-badge tech-badge">Tech</span>
+            <h1>Mohammad <span class="text-accent">Hassieb</span></h1>
+            <p class="subheading hero-subheading">
+              <span class="subheading-role">Software Engineer & Developer</span>
+              <span class="subheading-line"><i class="fas fa-map-marker-alt"></i> Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo</span>
+              <span class="subheading-line"><i class="fas fa-phone"></i> <a href="tel:+2001211494107">+20 01211494107</a> <span class="subheading-sep">·</span> <i class="fas fa-envelope"></i> <a href="mailto:mohammadhassieb@gmail.com">mohammadhassieb@gmail.com</a></span>
+            </p>
+            <p class="lead" data-content="tech-about">Loading...</p>
+            <div class="social-icons mobile-social hero-mobile-only">
+              <a class="social-icon" href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a class="social-icon" href="https://github.com/hassiebb" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a class="social-icon" href="https://wa.link/fthmku" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a class="social-icon" href="https://www.instagram.com/mhassieb_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a class="social-icon" href="assets/img/Mohammad Hassieb resume.pdf" download aria-label="Download CV"><i class="fas fa-download"></i></a>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="resume-section" id="skills">
         <div class="resume-section-content">
-          <h2>Skills</h2>
-          <div id="tech-skills"><!-- Filled by JS --></div>
+          <h2><i class="fas fa-code section-icon"></i> Technical Skills</h2>
+          <div id="tech-skills"></div>
         </div>
       </section>
 
       <section class="resume-section" id="projects">
         <div class="resume-section-content">
-          <h2>Projects</h2>
-          <div id="tech-projects"><!-- Filled by JS --></div>
+          <h2><i class="fas fa-folder-open section-icon"></i> Tech Projects</h2>
+          <div id="tech-projects"></div>
+        </div>
+      </section>
+
+      <section class="resume-section" id="experience">
+        <div class="resume-section-content">
+          <h2><i class="fas fa-briefcase section-icon"></i> Experience</h2>
+          <div id="tech-experience"></div>
+        </div>
+      </section>
+
+      <section class="resume-section" id="education">
+        <div class="resume-section-content">
+          <h2><i class="fas fa-graduation-cap section-icon"></i> Education</h2>
+          <div id="tech-education"></div>
+        </div>
+      </section>
+
+      <section class="resume-section" id="contact">
+        <div class="resume-section-content">
+          <h2><i class="fas fa-envelope section-icon"></i> Contact</h2>
+          <p class="contact-cta" data-content="contact-cta">Open to collaboration and job opportunities. Let's connect.</p>
+          <div class="contact-links">
+            <a href="mailto:mohammadhassieb@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/mhassieb_/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
         </div>
       </section>
     </div>
 
     <!-- Creative Section -->
     <div class="portfolio-section" id="creativeSection" role="tabpanel" hidden>
-      <section class="resume-section" id="about-creative">
-        <div class="resume-section-content">
-          <span class="section-badge creative-badge">Creative</span>
-          <h1>Mohammad <span class="text-accent">Hassieb</span></h1>
-          <p class="subheading">
-            Graphic Designer & Photographer<br>
-            <span class="location">Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo</span><br>
-            <a href="tel:+2001211494107">+20 01211494107</a> ·
-            <a href="mailto:mohammadhassieb@gmail.com">mohammadhassieb@gmail.com</a>
-          </p>
-          <p class="lead" data-content="creative-about">Loading...</p>
-          <div class="social-icons d-lg-none">
-            <a class="social-icon" href="https://www.instagram.com/mhassieb_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a class="social-icon" href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a class="social-icon" href="https://www.youtube.com/@Mohammad_Hassieb" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a class="social-icon" href="assets/img/Mohammad Hassieb resume.pdf" download aria-label="Download CV"><i class="fas fa-download"></i></a>
+      <section class="resume-section hero-section" id="about-creative">
+        <div class="resume-section-content hero-content">
+          <div class="hero-photo-wrap hero-mobile-only">
+            <img class="hero-photo" src="assets/img/My photo.png" alt="Mohammad Hassieb" />
           </div>
+          <div class="hero-text">
+            <span class="section-badge creative-badge">Creative</span>
+            <h1>Mohammad <span class="text-accent">Hassieb</span></h1>
+            <p class="subheading hero-subheading">
+              <span class="subheading-role">Graphic Designer & Sports Photographer</span>
+              <span class="subheading-line"><i class="fas fa-map-marker-alt"></i> Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo</span>
+              <span class="subheading-line"><i class="fas fa-phone"></i> <a href="tel:+2001211494107">+20 01211494107</a> <span class="subheading-sep">·</span> <i class="fas fa-envelope"></i> <a href="mailto:mohammadhassieb@gmail.com">mohammadhassieb@gmail.com</a></span>
+            </p>
+            <p class="lead" data-content="creative-about">Loading...</p>
+            <div class="social-icons mobile-social hero-mobile-only">
+              <a class="social-icon" href="https://www.instagram.com/mhassieb_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a class="social-icon" href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a class="social-icon" href="https://www.youtube.com/@Mohammad_Hassieb" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a class="social-icon" href="assets/img/Mohammad Hassieb resume.pdf" download aria-label="Download CV"><i class="fas fa-download"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section" id="creative-intro">
+        <div class="resume-section-content">
+          <h2><i class="fas fa-palette section-icon"></i> Creative Work</h2>
+          <p class="lead" data-content="creative-intro">Loading...</p>
+        </div>
+      </section>
+
+      <section class="resume-section" id="photography-intro">
+        <div class="resume-section-content">
+          <h2><i class="fas fa-camera section-icon"></i> Photography</h2>
+          <p class="lead" data-content="photography-intro">Loading...</p>
+        </div>
+      </section>
+
+      <section class="resume-section" id="achievements">
+        <div class="resume-section-content">
+          <h2><i class="fas fa-trophy section-icon"></i> Achievements</h2>
+          <ul class="achievements-list" id="creative-achievements"></ul>
         </div>
       </section>
 
       <section class="resume-section" id="experience-creative">
         <div class="resume-section-content">
-          <h2>Experience</h2>
-          <div id="creative-experience"><!-- Filled by JS --></div>
-          <div id="creative-experience-empty" class="empty-state" style="display:none">
-            <i class="fas fa-briefcase"></i>
-            <p>Add your creative work experience in <code>data/config.js</code></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="resume-section" id="education-creative">
-        <div class="resume-section-content">
-          <h2>Education</h2>
-          <div id="creative-education"><!-- Filled by JS --></div>
-          <div id="creative-education-empty" class="empty-state" style="display:none">
-            <i class="fas fa-graduation-cap"></i>
-            <p>Add creative education in <code>data/config.js</code>, or it will show your tech education.</p>
-          </div>
+          <h2><i class="fas fa-briefcase section-icon"></i> Experience</h2>
+          <div id="creative-experience"></div>
         </div>
       </section>
 
       <section class="resume-section" id="skills-creative">
         <div class="resume-section-content">
-          <h2>Skills</h2>
-          <div id="creative-skills"><!-- Filled by JS --></div>
+          <h2><i class="fas fa-tools section-icon"></i> Tools & Software</h2>
+          <div id="creative-skills"></div>
         </div>
       </section>
 
-      <section class="resume-section" id="projects-creative">
+      <section class="resume-section" id="contact-creative">
         <div class="resume-section-content">
-          <h2>Projects</h2>
-          <div id="creative-projects"><!-- Filled by JS --></div>
-          <div id="creative-projects-empty" class="empty-state" style="display:none">
-            <i class="fas fa-images"></i>
-            <p>Add your design/photography projects in <code>data/config.js</code></p>
+          <h2><i class="fas fa-envelope section-icon"></i> Contact</h2>
+          <p class="contact-cta" data-content="contact-cta-creative">Open to collaboration and job opportunities. Let's connect.</p>
+          <div class="contact-links">
+            <a href="mailto:mohammadhassieb@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/mo-hassieb/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/mhassieb_/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
           </div>
         </div>
       </section>
