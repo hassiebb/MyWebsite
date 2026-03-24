@@ -25,9 +25,9 @@ const PORTFOLIO_CONFIG = {
     experience: [
       {
         title: "SAP ABAP Developer",
-        company: "[Company Name]",
+        company: "Accely",
         type: "Full-time",
-        period: "[Period]",
+        period: "January 2024 - January 2025 (1 year)",
         location: "Cairo, Egypt",
         description: "Started as intern, promoted to full-time. Delivered reports, ALV, Adobe Forms, enhancements, and debugging. Gained exposure to SAP BTP.",
         highlights: [
@@ -41,7 +41,7 @@ const PORTFOLIO_CONFIG = {
         title: "Frontend Developer",
         company: "Freelance",
         type: "Freelance",
-        period: "[Period]",
+        period: "July 2023 - Present (2 years 9 months)",
         location: "Remote",
         description: "Built responsive websites for clients using HTML, CSS, JavaScript, and React. Delivered projects independently from concept to deployment.",
         highlights: [
@@ -51,18 +51,18 @@ const PORTFOLIO_CONFIG = {
         skills: "React · Responsive Design · Git",
       },
       {
-        title: "Graphic Designer & Sports Photographer",
-        company: "Freelance",
-        type: "Freelance",
-        period: "[Period]",
+        title: "ECM Consultant",
+        company: "ASSET Technology Group",
+        type: "Internship",
+        period: "July 2025 - August 2025 (2 months)",
         location: "Cairo, Egypt",
-        description: "Designed graphics for teams and players. Shot games, portraits, and events. Known for fast delivery and a distinct sports visual style.",
+        description: "Short-term internship focused on ECM solutions. Gained insights into enterprise content management and related technologies.",
         highlights: [
-          "Graphics for teams and players",
-          "Game photography, portraits, events",
-          "Fast delivery, unique sports style",
+          "ECM solutions implementation",
+          "Enterprise content management",
+          "Related technologies exposure",
         ],
-        skills: "Photoshop · Canva · Sports Photography",
+        skills: "ECM · Enterprise Content Management",
       },
     ],
     education: [
@@ -84,7 +84,7 @@ const PORTFOLIO_CONFIG = {
         },
         {
           name: "Frameworks & Libraries",
-          items: ["React", "Bootstrap"],
+          items: ["React", "Bootstrap" , "Material-UI"],
         },
         {
           name: "SAP Technologies",
@@ -92,7 +92,7 @@ const PORTFOLIO_CONFIG = {
         },
         {
           name: "Tools",
-          items: ["Git", "Responsive Design"],
+          items: ["Git", "Responsive Design" , "VS Code", "SAP GUI"],
         },
       ],
       tools: [
@@ -109,18 +109,45 @@ const PORTFOLIO_CONFIG = {
         type: "Personal",
         period: "Present",
         description: "Personal website showcasing projects and skills. Focus on responsive design and clean UI.",
-        link: null,
-        github: "https://github.com/hassiebb",
+        link: "null",
+        github: "https://github.com/hassiebb/MyWebsite",
       },
       {
         title: "Trend / GALA Media Website",
         type: "Freelance",
-        period: "[Year]",
+        period: "Sep 2024 - Dec 2024 (4 months)",
         description: "Built for a media company using frontend technologies. Focused on performance and user experience.",
-        link: null,
+        link: "https://trendeg.net/",
         github: null,
       },
+      {
+        title: "Home Sphere Website (Graduation Project)",
+        type: "Personal/Academic",
+        period: "Jun 2024 - Sep 2024 (4 months)",
+        description: "Graduation project focusing on creating a responsive website for a smart home system application.",
+        link: "https://hassiebb.github.io/Home-Sphere/",
+        github: "https://github.com/hassiebb/Home-Sphere",
+      },
+      {
+        title: "Landing page for an e-commerce clothing shop",
+        type: "Personal/Academic",
+        period: "Nov 2022 - Dec 2022 (2 months)",
+        description: "Created a landing page for an e-commerce clothing shop, focusing on user experience and conversion optimization.",
+        link: "https://hassiebb.github.io/landingWebsite/",
+        github: "https://github.com/hassiebb/landingWebsite",
+      },
+      {
+        title: "Pets adoption website",
+        type: "Personal/Academic",
+        period: "Nov 2022 - Dec 2022 (2 months)",
+        description: "Developed a website for a pet adoption platform, focusing on user experience and accessibility.",
+        link: "https://hassiebb.github.io/sw-project/",
+        github: "https://github.com/hassiebb/sw-project",
+      },
+
     ],
+      
+    
   },
 
   creative: {
