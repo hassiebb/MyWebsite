@@ -124,7 +124,7 @@
   }
 
   function renderEducation(edu) {
-    const meta = [edu.period, edu.expectedGrad ? `Expected: ${edu.expectedGrad}` : ''].filter(Boolean).join(' · ');
+    const meta = [edu.expectedGrad, edu.period ? ` ${edu.period}` : ''].filter(Boolean).join(' · ');
     return `
       <div class="education-item">
         <div class="education-degree">${escapeHtml(edu.degree)}</div>

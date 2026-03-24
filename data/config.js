@@ -4,7 +4,7 @@
 const PORTFOLIO_CONFIG = {
   profile: {
     name: "Mohammad Hassieb",
-    photo: "assets/img/My photo.png",
+    photo: "assets/img/My photo2.png",
     location: "Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo",
     phone: "+20 01211494107",
     email: "mohammadhassieb@gmail.com",
@@ -21,7 +21,7 @@ const PORTFOLIO_CONFIG = {
   tech: {
     title: "Tech",
     subtitle: "Software Engineer & Developer",
-    about: "I'm a hybrid professional—developer and creative. I build with SAP ABAP and frontend technologies, and I create in sports media (basketball). I combine technical precision with visual storytelling to deliver results that work.",
+    about: "Junior Software Developer with 3+ years of combined experience in frontend development and SAP ABAP within both freelance and corporate environments. Skilled in developing SAP solutions including reports, ALV reports, Adobe Forms, and enhancements, with exposure to SAP BTP. Proficient in building responsive web applications using HTML, CSS, JavaScript, and React. Demonstrates strong adaptability, problem-solving skills, and the ability to deliver real-world projects independently.",
     experience: [
       {
         title: "SAP ABAP Developer",
@@ -70,10 +70,10 @@ const PORTFOLIO_CONFIG = {
         degree: "Bachelor of Computer Science",
         school: "Modern University for Technology & Information (MTI)",
         track: "Computer Science Track",
-        period: "[Graduation Year]",
-        expectedGrad: null,
-        gpa: null,
-        skills: null,
+        period: "2024",
+        expectedGrad: "Graduated",
+        gpa: "",
+        skills: "HTML · CSS · JavaScript · React · Bootstrap · Git · Responsive Design",
       },
     ],
     skills: {
@@ -87,7 +87,7 @@ const PORTFOLIO_CONFIG = {
           items: ["React", "Bootstrap"],
         },
         {
-          name: "SAP",
+          name: "SAP Technologies",
           items: ["Reports", "ALV Reports", "Adobe Forms", "Enhancements", "Function Modules", "Debugging", "SAP BTP (basic exposure)"],
         },
         {
@@ -126,7 +126,7 @@ const PORTFOLIO_CONFIG = {
   creative: {
     title: "Creative",
     subtitle: "Graphic Designer & Sports Photographer",
-    about: "I blend graphic design and sports photography to tell visual stories. My focus is the basketball niche—teams, players, and the energy of the game.",
+    about: "Graphic Designer & Sports Photographer specializing in basketball media, with proven success in building engaging visual content. Grew a sports platform to 1.5M+ views and 3K+ followers within 2 months, working with teams, players, and referees.",
     creativeIntro: "Graphic design and sports photography are at the core of my creative work. I focus on visual storytelling with a clear niche: basketball.",
     photographyIntro: "I shoot basketball games, teams, and players. Coming from a background as a player and referee, I understand the game—which helps me capture key moments.",
     achievements: [
