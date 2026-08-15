@@ -1,50 +1,135 @@
-# My Resume Website
+# Mohammad Hassieb — Personal Portfolio & CV Platform
 
-This repository contains the source code for my personal resume website. The website is developed using HTML, CSS, JavaScript, and the Bootstrap framework. It serves as a platform to showcase my skills, projects, and provide insights into my personality.
+A modern, high-performance personal portfolio and dual-persona website built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS v4**, and **Framer Motion**.
 
-![My website.png](https://github.com/hassiebb/MyWebsite/blob/main/assets/img/My%20website.png)
+The platform features an interactive persona switcher spotlighting two professional specializations:
+1. **Tech Persona:** Software Engineer, Frontend Web Developer, and Enterprise SAP ABAP Developer.
+2. **Creative Persona:** Sports Photographer, Graphic Designer, and Basketball Media Specialist.
 
-## Features
+---
 
-- **Responsive Design**: The website is designed to be responsive, ensuring optimal viewing experience across different devices and screen sizes.
+## ✨ Key Features
 
-- **Interactive Layout**: The website utilizes modern web technologies to create an interactive and engaging user experience. It includes smooth animations, dynamic elements, and intuitive navigation.
+- 🌓 **Dual-Persona Architecture:** Seamlessly toggle between Tech and Creative identities with fluid Framer Motion layout transitions.
+- 🎨 **Modern Design System:** Built with Tailwind CSS v4, custom glassmorphism effects, curated typography (`Outfit` + `DM Sans`), and dark/light theme support.
+- 📱 **Fully Responsive:** Fluid layouts designed from 320px mobile screens to ultra-wide desktop monitors, featuring an accessible off-canvas mobile drawer.
+- ⚡ **Ultra-Fast Performance:** Zero runtime CDNs, tree-shakable SVG icons (Lucide React & React Icons), optimized asset handling, and instant Vite HMR.
+- ♿ **Accessibility First:** Semantic HTML5 landmarks, ARIA tablist/tab semantics, focus-visible states, keyboard ESC navigation, and `prefers-reduced-motion` compliance.
+- 🔍 **SEO & Social Optimization:** Comprehensive Open Graph cards, Twitter metadata, Favicon icons, and Schema.org JSON-LD Person structured data.
+- 🛡️ **Type-Safe Data Architecture:** Centralized and strongly-typed data layer (`src/data/`) with zero fragile DOM queries or stringified links.
 
-- **Skills Showcase**: The website includes a dedicated section to highlight my technical skills and areas of expertise. It provides an overview of the programming languages, frameworks, and tools I am proficient in.
+---
 
-- **Project Showcase**: The Projects section showcases a selection of my notable projects. Each project is presented with a brief description, key features, and a link to access the project or its source code.
+## 🛠️ Technology Stack
 
-- **About Me**: The About Me section offers insights into my personality, interests, and professional background. It provides a comprehensive overview of my qualifications, experiences, and aspirations.
+| Layer | Technology |
+| :--- | :--- |
+| **Framework** | React 19 (Strict Mode) |
+| **Build Tool & Bundler** | Vite 6 |
+| **Language** | TypeScript 5.7 |
+| **Styling** | Tailwind CSS v4 with CSS Variables |
+| **Animations** | Framer Motion (Spring-based physics) |
+| **Icons** | Lucide React + React Icons (Fa6) |
+| **Fonts** | Google Fonts (`Outfit` & `DM Sans`) |
 
-## Installation and Usage
+---
 
-To use the website locally, follow these steps:
+## 📁 Project Structure
 
-1. Clone the repository: `git clone https://github.com/your-username/resume-website.git`
-2. Navigate to the project directory: `cd resume-website`
-3. Open the `index.html` file in your preferred web browser.
+```text
+MyWebsite/
+├── public/
+│   ├── avatar.png                  # Profile photograph
+│   ├── favicon.ico                 # Site favicon
+│   ├── preview.png                 # Open Graph preview image
+│   └── documents/                  # CV / Resume documents
+├── src/
+│   ├── assets/                     # Bundled visual assets
+│   ├── components/
+│   │   ├── common/                 # Reusable UI atoms (Button, Card, Badge, ThemeToggle, etc.)
+│   │   ├── layout/                 # Layout shell (Header, Sidebar, MobileDrawer, Footer)
+│   │   └── sections/
+│   │       ├── tech/               # Tech persona sections (Hero, Skills, Projects, Experience, Education, Contact)
+│   │       └── creative/           # Creative persona sections (Hero, Work, Photography, Achievements, Tools, Contact)
+│   ├── data/                       # Strongly typed data modules
+│   │   ├── profile.ts              # Core profile and social links
+│   │   ├── tech.ts                 # Technical bio, skills, experience, education
+│   │   ├── creative.ts             # Creative bio, achievements, tools, gallery
+│   │   └── projects.ts             # Featured engineering and web projects
+│   ├── hooks/                      # Custom hooks (useTheme, useActiveSection)
+│   ├── types/                      # TypeScript domain interfaces
+│   ├── utils/                      # Class merging utilities (clsx, twMerge)
+│   ├── App.tsx                     # Main application layout coordinator
+│   ├── main.tsx                    # React root entry point
+│   └── index.css                   # Tailwind CSS v4 & custom design tokens
+├── index.html                      # SEO metadata & JSON-LD entry
+├── package.json                    # Project dependencies & scripts
+├── tsconfig.json                   # TypeScript configuration
+└── vite.config.ts                  # Vite build configuration
+```
 
-Alternatively, you can deploy the website to a web hosting service of your choice to make it accessible online.
+---
 
-## Customization
+## 🚀 Getting Started
 
-Feel free to customize the website according to your preferences and needs. You can modify the content, layout, and styling by editing the HTML, CSS, and JavaScript files.
+### Prerequisites
 
-The website uses the Bootstrap framework, making it easy to customize the design. You can leverage the Bootstrap components, classes, and utilities to create your desired look and feel.
+Ensure you have **Node.js** (v18 or higher) and **npm** installed on your system.
 
-## Credits
+### 1. Installation
 
-The website is developed with the help of the following resources:
+Clone the repository and install dependencies:
 
-- [Bootstrap](https://getbootstrap.com): A popular front-end framework for building responsive and mobile-first websites.
-- [FontAwesome](https://fontawesome.com): An iconic font and CSS toolkit for adding scalable icons to your web projects.
+```bash
+git clone https://github.com/hassiebb/MyWebsite.git
+cd MyWebsite
+npm install
+```
 
-## License
+### 2. Run Locally (Development)
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
+Start the Vite development server with Hot Module Replacement:
 
-## Contact
+```bash
+npm run dev
+```
 
-For any inquiries or suggestions, please feel free to reach out to me by email at [mohamamdhassieb@gmail.com](mailto:mohamamdhassieb@gmail.com) or at instagram [mhassieb_](https://www.instagram.com/mhassieb_/).
+The application will be accessible at: `http://localhost:3000`
 
-Thank you for visiting my resume website repository!
+### 3. Production Build
+
+Compile TypeScript and build the optimized production bundle:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📄 Adding Your Resume / CV
+
+To enable direct CV downloads:
+1. Place your resume PDF in `public/documents/Mohammad-Hassieb-Resume.pdf`
+2. Update `cvPath` in [`src/data/profile.ts`](src/data/profile.ts) to `'/documents/Mohammad-Hassieb-Resume.pdf'`
+
+---
+
+## 📬 Contact & Links
+
+- **Email:** [mohammadhassieb@gmail.com](mailto:mohammadhassieb@gmail.com)
+- **LinkedIn:** [Mohammad Hassieb](https://www.linkedin.com/in/mo-hassieb/)
+- **GitHub:** [@hassiebb](https://github.com/hassiebb)
+- **Instagram:** [@mhassieb_](https://www.instagram.com/mhassieb_/)
+- **YouTube:** [@Mohammad_Hassieb](https://www.youtube.com/@Mohammad_Hassieb)
+
+---
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
