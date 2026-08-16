@@ -83,13 +83,13 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
             role="dialog"
             aria-modal="true"
             aria-label="Navigation Menu"
-            className="fixed top-0 left-0 bottom-0 z-50 w-72 max-w-[85vw] bg-[var(--surface)] border-r border-[var(--border)] p-6 flex flex-col justify-between shadow-2xl lg:hidden overflow-y-auto"
+            className="fixed top-0 left-0 bottom-0 z-50 w-[min(85vw,300px)] max-w-full bg-[var(--surface)] border-r border-[var(--border)] p-4 sm:p-6 flex flex-col justify-between shadow-2xl lg:hidden overflow-y-auto"
           >
             {/* Header with Close */}
             <div>
-              <div className="flex items-center justify-between pb-4 border-b border-[var(--border)]">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-extrabold text-sm shadow-md">
+              <div className="flex items-center justify-between pb-3 border-b border-[var(--border)]">
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-extrabold text-xs shadow-md">
                     MH
                   </div>
                   <span className="font-bold text-sm text-[var(--text-primary)]">Menu</span>
@@ -97,24 +97,24 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
                 <button
                   onClick={onClose}
                   aria-label="Close navigation menu"
-                  className="w-9 h-9 rounded-xl flex items-center justify-center border border-[var(--border)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] transition-colors"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center border border-[var(--border)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
 
               {/* Profile Bio Card */}
-              <div className="my-5 flex items-center gap-3">
+              <div className="my-4 flex items-center gap-3">
                 <img
                   src={profile.avatarUrl}
                   alt={profile.name}
-                  width={56}
-                  height={56}
-                  className="w-14 h-14 rounded-2xl object-cover border border-[var(--border)] shadow-sm"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-xl object-cover border border-[var(--border)] shadow-xs flex-shrink-0"
                 />
-                <div>
-                  <h4 className="font-extrabold text-sm text-[var(--text-primary)]">{profile.name}</h4>
-                  <div className="mt-1 inline-flex items-center gap-1 text-[10px] font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-extrabold text-xs sm:text-sm text-[var(--text-primary)] truncate">{profile.name}</h4>
+                  <div className="mt-0.5 inline-flex items-center gap-1 text-[10px] font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-md border border-emerald-500/20">
                     <Sparkles className="w-2.5 h-2.5" />
                     <span>Available</span>
                   </div>
@@ -122,7 +122,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
               </div>
 
               {/* Navigation Links */}
-              <nav className="flex flex-col gap-1 my-4">
+              <nav className="flex flex-col gap-0.5 my-3">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.id;
                   return (
@@ -131,7 +131,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
                       href={`#${item.id}`}
                       onClick={onClose}
                       className={cn(
-                        'px-4 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-between',
+                        'px-3.5 py-2 rounded-xl text-sm font-medium transition-colors flex items-center justify-between',
                         isActive
                           ? activePersona === 'tech'
                             ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 font-semibold'
@@ -155,13 +155,13 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
             </div>
 
             {/* Bottom Actions */}
-            <div className="pt-4 border-t border-[var(--border)] flex flex-col gap-4">
+            <div className="pt-3 border-t border-[var(--border)] flex flex-col gap-3">
               {profile.cvPath ? (
                 <a
                   href={profile.cvPath}
                   download
                   onClick={onClose}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--accent-blue)] text-white shadow-md"
+                  className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--accent-blue)] text-white shadow-md"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Download CV</span>

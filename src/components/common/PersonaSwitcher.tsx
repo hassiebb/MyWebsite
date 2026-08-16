@@ -19,12 +19,12 @@ export const PersonaSwitcher: React.FC<PersonaSwitcherProps> = ({
     {
       id: 'tech',
       label: 'Tech',
-      icon: <Code2 className="w-4 h-4" />,
+      icon: <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />,
     },
     {
       id: 'creative',
       label: 'Creative',
-      icon: <Palette className="w-4 h-4" />,
+      icon: <Palette className="w-3.5 h-3.5 sm:w-4 sm:h-4" />,
     },
   ];
 
@@ -33,7 +33,7 @@ export const PersonaSwitcher: React.FC<PersonaSwitcherProps> = ({
       role="tablist"
       aria-label="Portfolio Mode"
       className={cn(
-        'relative inline-flex items-center p-1 bg-[var(--bg-secondary)] border border-[var(--border)] rounded-2xl shadow-inner',
+        'relative inline-flex items-center p-0.5 sm:p-1 bg-[var(--bg-secondary)] border border-[var(--border)] rounded-xl sm:rounded-2xl shadow-inner max-w-full',
         className
       )}
     >
@@ -46,7 +46,7 @@ export const PersonaSwitcher: React.FC<PersonaSwitcherProps> = ({
             aria-selected={isActive}
             onClick={() => onChange(tab.id)}
             className={cn(
-              'relative z-10 flex items-center gap-2 px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-xl transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[var(--accent-blue)] select-none',
+              'relative z-10 flex items-center gap-1 sm:gap-2 px-2 sm:px-3.5 py-1 sm:py-1.5 text-[11px] sm:text-sm font-semibold rounded-lg sm:rounded-xl transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-[var(--accent-blue)] select-none whitespace-nowrap',
               isActive
                 ? tab.id === 'tech'
                   ? 'text-blue-600 dark:text-blue-400'
@@ -61,7 +61,7 @@ export const PersonaSwitcher: React.FC<PersonaSwitcherProps> = ({
               <motion.div
                 layoutId="persona-indicator"
                 transition={{ type: 'spring', stiffness: 450, damping: 35 }}
-                className="absolute inset-0 z-[-1] bg-[var(--surface)] rounded-xl shadow-md border border-[var(--border)]"
+                className="absolute inset-0 z-[-1] bg-[var(--surface)] rounded-lg sm:rounded-xl shadow-md border border-[var(--border)]"
               />
             )}
           </button>

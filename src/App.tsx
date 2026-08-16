@@ -78,7 +78,7 @@ export function App() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${
+      className={`min-h-screen w-full max-w-full overflow-x-hidden transition-colors duration-300 ${
         activePersona === 'tech' ? 'bg-mesh-tech' : 'bg-mesh-creative'
       }`}
     >
@@ -108,8 +108,8 @@ export function App() {
       />
 
       {/* Main Content Area */}
-      <main className="lg:pl-64 pt-16 sm:pt-18 min-h-screen flex flex-col justify-between">
-        <div className="max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-10">
+      <main className="lg:pl-64 pt-14 sm:pt-18 min-h-screen w-full max-w-full flex flex-col justify-between overflow-x-hidden">
+        <div className="max-w-5xl mx-auto w-full px-3.5 sm:px-6 lg:px-10 min-w-0">
           <AnimatePresence mode="wait">
             {activePersona === 'tech' ? (
               <motion.div
@@ -118,6 +118,7 @@ export function App() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.3 }}
+                className="w-full max-w-full min-w-0"
               >
                 <TechHero profile={profileData} aboutText={techAbout} />
                 <TechSkills categories={techSkills.categories} tools={techSkills.tools} />
@@ -136,6 +137,7 @@ export function App() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.3 }}
+                className="w-full max-w-full min-w-0"
               >
                 <CreativeHero profile={profileData} aboutText={creativeAbout} />
                 <CreativeWork introText={creativeIntro} />

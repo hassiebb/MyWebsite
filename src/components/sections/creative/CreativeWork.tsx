@@ -31,7 +31,7 @@ export const CreativeWork: React.FC<CreativeWorkProps> = ({ introText }) => {
   ];
 
   return (
-    <section id="creative-work" className="py-12 sm:py-16 border-t border-[var(--border)]">
+    <section id="creative-work" className="py-10 sm:py-16 border-t border-[var(--border)] w-full max-w-full min-w-0 overflow-hidden">
       <SectionHeading
         title="Creative Work & Design Narrative"
         subtitle={introText}
@@ -40,7 +40,7 @@ export const CreativeWork: React.FC<CreativeWorkProps> = ({ introText }) => {
         icon={<Palette className="w-4 h-4" />}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 w-full max-w-full min-w-0">
         {pillars.map((pillar, idx) => (
           <motion.div
             key={pillar.title}
@@ -48,16 +48,17 @@ export const CreativeWork: React.FC<CreativeWorkProps> = ({ introText }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
+            className="w-full max-w-full min-w-0"
           >
-            <Card glow="purple" className="h-full flex flex-col justify-between">
-              <div>
-                <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 border border-purple-500/20">
+            <Card glow="purple" className="h-full flex flex-col justify-between w-full max-w-full min-w-0 p-5 sm:p-7">
+              <div className="w-full min-w-0">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-500/10 flex items-center justify-center mb-3.5 border border-purple-500/20 flex-shrink-0">
                   {pillar.icon}
                 </div>
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-[var(--text-primary)] mb-2 break-words">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed break-words">
                   {pillar.description}
                 </p>
               </div>
