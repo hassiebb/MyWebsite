@@ -73,8 +73,9 @@ export function App() {
     document.title =
       activePersona === 'tech'
         ? 'Mohammad Hassieb | Software Engineer & Developer'
-        : 'Mohammad Hassieb | Graphic Designer & Sports Photographer';
+        : 'Mohammad Hassieb | Sports Media & Social Media';
   }, [activePersona]);
+
 
   return (
     <div

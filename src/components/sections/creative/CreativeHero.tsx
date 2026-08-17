@@ -1,6 +1,7 @@
 import React from 'react';
-import { Camera, Palette, Trophy, Send, Sparkles, Flame } from 'lucide-react';
+import { Camera, Trophy, Send, Flame, Share2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 import { SocialIcons } from '../../common/SocialIcons';
 import { Button } from '../../common/Button';
 import { Profile } from '../../../types/portfolio';
@@ -41,13 +42,13 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
           className="flex flex-wrap items-center gap-2 max-w-full"
         >
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
-            <Palette className="w-3.5 h-3.5" />
-            <span>Sports Visual Media</span>
+            <Share2 className="w-3.5 h-3.5" />
+            <span>Sports Media & Social Media</span>
           </span>
 
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
             <Flame className="w-3.5 h-3.5" />
-            <span>Basketball Specialist</span>
+            <span>Graphic Designer · Sports Photographer · Social Media Manager</span>
           </span>
         </motion.div>
 
@@ -69,27 +70,28 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
           </p>
         </motion.div>
 
-        {/* Highlight Stats Snippet */}
+        {/* Metrics Row */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.15 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 max-w-xl w-full"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl w-full"
         >
           <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">1.5M+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Instagram Views in 60 Days</span>
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10K+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Instagram Followers</span>
           </div>
           <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">3.1K+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Active Sports Community</span>
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10K+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Facebook Followers</span>
           </div>
-          <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs flex flex-col justify-center">
-            <div className="flex items-center gap-1 text-purple-600 dark:text-purple-400 font-bold text-xs sm:text-sm">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Pro Clubs</span>
-            </div>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Al Ahly · Zamalek · Al Dakhlia</span>
+          <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10M+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Instagram Views</span>
+          </div>
+          <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">750K+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Giza Zone Views</span>
           </div>
         </motion.div>
 
@@ -111,12 +113,12 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
           className="flex flex-wrap items-center gap-2.5 pt-2 max-w-full"
         >
           <Button
-            href="#achievements"
+            href="#creative-experience"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-md shadow-purple-500/20"
             size="sm"
             icon={<Trophy className="w-4 h-4" />}
           >
-            View Key Achievements
+            View Case Studies
           </Button>
 
           <Button href="#photography" variant="secondary" size="sm" icon={<Camera className="w-4 h-4" />}>
@@ -136,3 +138,4 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
     </section>
   );
 };
+

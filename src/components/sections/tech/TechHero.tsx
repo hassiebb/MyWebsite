@@ -11,7 +11,8 @@ interface TechHeroProps {
 }
 
 export const TechHero: React.FC<TechHeroProps> = ({ profile, aboutText }) => {
-  const highlightSkills = ['React', 'TypeScript', 'SAP ABAP', 'JavaScript', 'Tailwind CSS', 'Git'];
+  const highlightSkills = ['React', 'Next.js', 'TypeScript', 'Full-stack Web Development', 'SAP ABAP', 'Supabase / PostgreSQL'];
+
 
   return (
     <section id="about" className="pt-6 sm:pt-14 pb-10 sm:pb-20 relative overflow-hidden w-full max-w-full">

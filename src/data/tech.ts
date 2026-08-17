@@ -1,7 +1,7 @@
 import { ExperienceItem, EducationItem, SkillCategory, SkillTool } from '../types/portfolio';
 
 export const techAbout =
-  'Junior Software Developer with 3+ years of combined experience in frontend development and SAP ABAP within both freelance and corporate environments. Skilled in developing SAP solutions including reports, ALV reports, Adobe Forms, and enhancements, with exposure to SAP BTP. Proficient in building responsive web applications using HTML, CSS, JavaScript, and React. Demonstrates strong adaptability, problem-solving skills, and the ability to deliver real-world projects independently.';
+  'Software Engineer & Developer with experience spanning modern web applications, React, Next.js, TypeScript, database-driven systems, enterprise software, and API integrations. Skilled in building responsive, scalable frontend interfaces, developing SAP ABAP enterprise solutions, and optimizing workflows across both freelance and corporate environments.';
 
 export const techSkills: {
   categories: SkillCategory[];
@@ -9,40 +9,39 @@ export const techSkills: {
 } = {
   categories: [
     {
-      name: 'Programming Languages',
-      items: ['JavaScript (ES6+)', 'TypeScript', 'ABAP', 'HTML5', 'CSS3 / Modern CSS'],
+      name: 'Programming',
+      items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL', 'ABAP'],
     },
     {
-      name: 'Frontend Frameworks & Libraries',
-      items: ['React', 'Tailwind CSS', 'Bootstrap', 'Material-UI', 'Vite', 'Framer Motion'],
+      name: 'Frontend',
+      items: ['React', 'Next.js', 'React Native', 'Expo', 'Vite', 'Tailwind CSS'],
     },
     {
-      name: 'SAP Enterprise Technologies',
-      items: [
-        'Classical & Interactive Reports',
-        'ALV Reports (ALV Grid)',
-        'Adobe Forms / SmartForms',
-        'Enhancements & User Exits',
-        'Function Modules & BAPIs',
-        'ABAP Debugging & Performance',
-        'SAP BTP (Cloud Exposure)',
-      ],
+      name: 'Backend / Data',
+      items: ['Supabase', 'PostgreSQL', 'Firebase', 'Firestore', 'APIs'],
     },
     {
-      name: 'Development Tools & Workflows',
-      items: ['Git & GitHub', 'VS Code', 'SAP GUI', 'Responsive Web Design', 'REST APIs', 'UI/UX Prototyping'],
+      name: 'Enterprise',
+      items: ['SAP ABAP', 'ECM'],
+    },
+    {
+      name: 'Tools',
+      items: ['Git', 'GitHub', 'Vercel'],
     },
   ],
   tools: [
-    { name: 'JavaScript', icon: 'javascript', category: 'Language' },
-    { name: 'TypeScript', icon: 'typescript', category: 'Language' },
+    { name: 'JavaScript', icon: 'javascript', category: 'Programming' },
+    { name: 'TypeScript', icon: 'typescript', category: 'Programming' },
     { name: 'React', icon: 'react', category: 'Frontend' },
-    { name: 'Tailwind CSS', icon: 'tailwindcss', category: 'Styling' },
-    { name: 'HTML5', icon: 'html5', category: 'Frontend' },
-    { name: 'CSS3', icon: 'css3', category: 'Frontend' },
-    { name: 'Git', icon: 'git', category: 'DevOps' },
+    { name: 'Next.js', icon: 'nextjs', category: 'Frontend' },
+    { name: 'Tailwind CSS', icon: 'tailwindcss', category: 'Frontend' },
+    { name: 'PostgreSQL', icon: 'postgresql', category: 'Backend / Data' },
+    { name: 'Supabase', icon: 'supabase', category: 'Backend / Data' },
+    { name: 'SAP ABAP', icon: 'sap', category: 'Enterprise' },
+    { name: 'Git', icon: 'git', category: 'Tools' },
   ],
 };
+
 
 export const techExperience: ExperienceItem[] = [
   {
@@ -106,3 +105,4 @@ export const techEducation: EducationItem[] = [
     skills: ['Data Structures & Algorithms', 'Web Development', 'React', 'JavaScript', 'Database Systems', 'Software Engineering'],
   },
 ];
+

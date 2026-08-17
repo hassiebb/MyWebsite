@@ -5,7 +5,7 @@ export const profileData: Profile = {
   firstName: 'Mohammad',
   lastName: 'Hassieb',
   techTitle: 'Software Engineer & Developer',
-  creativeTitle: 'Graphic Designer & Sports Photographer',
+  creativeTitle: 'Sports Media & Social Media',
   location: 'Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo, Egypt',
   phone: '+20 01211494107',
   email: 'mohammadhassieb@gmail.com',
@@ -45,3 +45,4 @@ export const profileData: Profile = {
     },
   ],
 };
+

@@ -35,8 +35,9 @@ export const Header: React.FC<HeaderProps> = ({
               Mohammad Hassieb
             </span>
             <span className="text-[10px] sm:text-[11px] font-medium text-[var(--text-muted)] truncate">
-              {activePersona === 'tech' ? 'Software & SAP Developer' : 'Designer & Photographer'}
+              {activePersona === 'tech' ? 'Software Engineer & Developer' : 'Sports Media & Social Media'}
             </span>
+
           </div>
         </a>
 
