@@ -123,9 +123,9 @@ To enable direct CV downloads:
 ## 📬 Contact & Links
 
 - **Email:** [mohammadhassieb@gmail.com](mailto:mohammadhassieb@gmail.com)
-- **LinkedIn:** [Mohammad Hassieb](https://www.linkedin.com/in/mo-hassieb/)
+- **LinkedIn:** [Mohammad Hassieb](www.linkedin.com/in/mohammadhassieb)
 - **GitHub:** [@hassiebb](https://github.com/hassiebb)
-- **Instagram:** [@mhassieb_](https://www.instagram.com/mhassieb_/)
+- **Instagram:** [@mhassieb_](https://www.instagram.com/mhassiebb/)
 - **YouTube:** [@Mohammad_Hassieb](https://www.youtube.com/@Mohammad_Hassieb)
 
 ---

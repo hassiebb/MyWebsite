@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera, Trophy, Send, Flame, Share2 } from 'lucide-react';
+import { Camera, Palette, Send, Share2, ShieldCheck, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { SocialIcons } from '../../common/SocialIcons';
@@ -34,22 +34,43 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
       </div>
 
       <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-full min-w-0">
-        {/* Badges */}
+        {/* 3 Core Role Pills */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="flex flex-wrap items-center gap-2 max-w-full"
         >
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+          <a
+            href="#social-media"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20 hover:bg-purple-500/20 transition-colors"
+          >
             <Share2 className="w-3.5 h-3.5" />
-            <span>Sports Media & Social Media</span>
-          </span>
+            <span>Social Media Specialist</span>
+          </a>
 
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
-            <Flame className="w-3.5 h-3.5" />
-            <span>Graphic Designer · Sports Photographer · Social Media Manager</span>
-          </span>
+          <a
+            href="#photography"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-pink-500/10 text-pink-600 dark:text-pink-400 border border-pink-500/20 hover:bg-pink-500/20 transition-colors"
+          >
+            <Camera className="w-3.5 h-3.5" />
+            <span>Sports Photographer</span>
+          </a>
+
+          <a
+            href="#graphic-design"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 transition-colors"
+          >
+            <Palette className="w-3.5 h-3.5" />
+            <span>Graphic Designer</span>
+          </a>
+
+          {profile.militaryStatus && (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>{profile.militaryStatus}</span>
+            </span>
+          )}
         </motion.div>
 
         {/* Heading */}
@@ -65,7 +86,7 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
               Hassieb
             </span>
           </h1>
-          <p className="mt-1.5 text-lg sm:text-2xl font-bold text-[var(--text-secondary)]">
+          <p className="mt-1.5 text-base sm:text-xl font-bold text-[var(--text-secondary)]">
             {profile.creativeTitle}
           </p>
         </motion.div>
@@ -78,20 +99,20 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
           className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 max-w-2xl w-full"
         >
           <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10K+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Instagram Followers</span>
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">40K+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">ETTF FB (From 24K)</span>
+          </div>
+          <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">3K+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">ETTF IG (From 500)</span>
           </div>
           <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
             <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10K+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Facebook Followers</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Full Court IG & FB</span>
           </div>
           <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
             <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10M+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Instagram Views</span>
-          </div>
-          <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">750K+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Giza Zone Views</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Cumulative IG Views</span>
           </div>
         </motion.div>
 
@@ -105,7 +126,7 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
           {aboutText}
         </motion.p>
 
-        {/* Action Buttons */}
+        {/* Action Buttons Jumping Directly to Each Specialty Section */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -113,16 +134,20 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
           className="flex flex-wrap items-center gap-2.5 pt-2 max-w-full"
         >
           <Button
-            href="#creative-experience"
+            href="#social-media"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-md shadow-purple-500/20"
             size="sm"
-            icon={<Trophy className="w-4 h-4" />}
+            icon={<TrendingUp className="w-4 h-4" />}
           >
-            View Case Studies
+            Social Media Growth
           </Button>
 
           <Button href="#photography" variant="secondary" size="sm" icon={<Camera className="w-4 h-4" />}>
             Photography Showcase
+          </Button>
+
+          <Button href="#graphic-design" variant="secondary" size="sm" icon={<Palette className="w-4 h-4" />}>
+            Graphic Design
           </Button>
 
           <Button href="#creative-contact" variant="ghost" size="sm" icon={<Send className="w-4 h-4" />}>
@@ -138,4 +163,3 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
     </section>
   );
 };
-

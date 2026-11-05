@@ -1,7 +1,7 @@
 import { ExperienceItem, EducationItem, SkillCategory, SkillTool } from '../types/portfolio';
 
 export const techAbout =
-  'Software Engineer & Developer with experience spanning modern web applications, React, Next.js, TypeScript, database-driven systems, enterprise software, and API integrations. Skilled in building responsive, scalable frontend interfaces, developing SAP ABAP enterprise solutions, and optimizing workflows across both freelance and corporate environments.';
+  'Web & Mobile Application Developer specializing in building high-performance web platforms with React, Next.js, and TypeScript, alongside cross-platform mobile apps using React Native and Expo. Experienced across full-stack database integrations (Supabase, PostgreSQL, Firebase), responsive UI engineering, and enterprise SAP ABAP solutions.';
 
 export const techSkills: {
   categories: SkillCategory[];
@@ -9,41 +9,55 @@ export const techSkills: {
 } = {
   categories: [
     {
-      name: 'Programming',
-      items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'SQL', 'ABAP'],
+      name: 'Web Development',
+      items: ['React', 'Next.js', 'TypeScript', 'JavaScript (ES6+)', 'Tailwind CSS', 'HTML5 & CSS3', 'Vite', 'shadcn/ui'],
     },
     {
-      name: 'Frontend',
-      items: ['React', 'Next.js', 'React Native', 'Expo', 'Vite', 'Tailwind CSS'],
+      name: 'Mobile App Development',
+      items: ['React Native', 'Expo', 'Cross-Platform UI', 'Mobile Navigation', 'Native Device APIs', 'Mobile State Management'],
     },
     {
-      name: 'Backend / Data',
-      items: ['Supabase', 'PostgreSQL', 'Firebase', 'Firestore', 'APIs'],
+      name: 'Backend & Database',
+      items: ['Supabase', 'PostgreSQL', 'Firebase', 'Firestore', 'REST APIs', 'SQL', 'Authentication'],
     },
     {
-      name: 'Enterprise',
-      items: ['SAP ABAP', 'ECM'],
-    },
-    {
-      name: 'Tools',
-      items: ['Git', 'GitHub', 'Vercel'],
+      name: 'Enterprise & Tools',
+      items: ['Git', 'GitHub', 'Vercel', 'SAP ABAP', 'SAP BTP', 'ECM Workflows'],
     },
   ],
   tools: [
-    { name: 'JavaScript', icon: 'javascript', category: 'Programming' },
-    { name: 'TypeScript', icon: 'typescript', category: 'Programming' },
-    { name: 'React', icon: 'react', category: 'Frontend' },
-    { name: 'Next.js', icon: 'nextjs', category: 'Frontend' },
-    { name: 'Tailwind CSS', icon: 'tailwindcss', category: 'Frontend' },
-    { name: 'PostgreSQL', icon: 'postgresql', category: 'Backend / Data' },
-    { name: 'Supabase', icon: 'supabase', category: 'Backend / Data' },
+    { name: 'React', icon: 'react', category: 'Web' },
+    { name: 'Next.js', icon: 'nextjs', category: 'Web' },
+    { name: 'React Native', icon: 'react-native', category: 'Mobile' },
+    { name: 'Expo', icon: 'expo', category: 'Mobile' },
+    { name: 'TypeScript', icon: 'typescript', category: 'Language' },
+    { name: 'JavaScript', icon: 'javascript', category: 'Language' },
+    { name: 'Tailwind CSS', icon: 'tailwindcss', category: 'Styling' },
+    { name: 'Supabase', icon: 'supabase', category: 'Backend' },
+    { name: 'PostgreSQL', icon: 'postgresql', category: 'Database' },
+    { name: 'Firebase', icon: 'firebase', category: 'Backend' },
+    { name: 'Git & GitHub', icon: 'git', category: 'Tools' },
     { name: 'SAP ABAP', icon: 'sap', category: 'Enterprise' },
-    { name: 'Git', icon: 'git', category: 'Tools' },
   ],
 };
 
-
 export const techExperience: ExperienceItem[] = [
+  {
+    id: 'freelance-web-mobile',
+    title: 'Web & Mobile App Developer',
+    company: 'Freelance & Independent Projects',
+    type: 'Freelance',
+    period: 'July 2023 - Present',
+    location: 'Remote / Cairo, Egypt',
+    description:
+      'Delivering end-to-end modern web applications and cross-platform mobile apps from initial UI/UX architecture to production deployment using React, Next.js, React Native (Expo), TypeScript, and cloud backends.',
+    highlights: [
+      'Architected responsive web apps and bilingual platforms using Next.js, React, TypeScript, and Tailwind CSS',
+      'Developed cross-platform mobile applications with React Native, Expo, Supabase, and Firebase',
+      'Spearheaded end-to-end client engagements from UI consultation to production hosting with 100% on-time delivery',
+    ],
+    skills: ['React', 'Next.js', 'React Native', 'Expo', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Git'],
+  },
   {
     id: 'accely-sap-abap',
     title: 'SAP ABAP Developer',
@@ -60,22 +74,6 @@ export const techExperience: ExperienceItem[] = [
       'Gained valuable architectural exposure to SAP BTP cloud environments',
     ],
     skills: ['ABAP', 'SAP Reports', 'ALV Grid', 'Adobe Forms', 'Function Modules', 'Debugging', 'SAP BTP'],
-  },
-  {
-    id: 'freelance-frontend',
-    title: 'Frontend Developer',
-    company: 'Freelance',
-    type: 'Freelance',
-    period: 'July 2023 - Present',
-    location: 'Remote / Cairo, Egypt',
-    description:
-      'Delivered end-to-end modern web applications and responsive client websites from initial UI concepts to production deployment using React, JavaScript, and modern styling solutions.',
-    highlights: [
-      'Architected responsive, performant websites using HTML, CSS, JavaScript, and React',
-      'Spearheaded end-to-end client projects from design consultation to production hosting',
-      'Maintained 100% on-time delivery across multiple client engagements',
-    ],
-    skills: ['React', 'JavaScript', 'Tailwind CSS', 'Responsive Design', 'Git', 'Client Consultation'],
   },
   {
     id: 'asset-tech-ecm',
@@ -102,7 +100,6 @@ export const techEducation: EducationItem[] = [
     track: 'Computer Science Track',
     period: '2020 - 2024',
     status: 'Graduated',
-    skills: ['Data Structures & Algorithms', 'Web Development', 'React', 'JavaScript', 'Database Systems', 'Software Engineering'],
+    skills: ['Data Structures & Algorithms', 'Web Development', 'Mobile Computing', 'React & JavaScript', 'Database Systems', 'Software Engineering'],
   },
 ];
-

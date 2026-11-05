@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Download, Sparkles } from 'lucide-react';
+import { X, Download, ShieldCheck, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SocialIcons } from '../common/SocialIcons';
 import { Profile, Persona } from '../../types/portfolio';
@@ -41,8 +41,8 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
 
   const techNavItems = [
     { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Tech Stack' },
+    { id: 'projects', label: 'Web & Mobile Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' },
@@ -50,15 +50,19 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
 
   const creativeNavItems = [
     { id: 'creative-about', label: 'About' },
-    { id: 'creative-work', label: 'Creative Work' },
-    { id: 'photography', label: 'Photography' },
-    { id: 'achievements', label: 'Achievements' },
+    { id: 'social-media', label: 'Social Media Growth' },
+    { id: 'photography', label: 'Sports Photography' },
+    { id: 'graphic-design', label: 'Graphic Design' },
     { id: 'creative-experience', label: 'Experience' },
-    { id: 'creative-tools', label: 'Tools & Media' },
+    { id: 'creative-tools', label: 'Tools & Gear' },
     { id: 'creative-contact', label: 'Contact' },
   ];
 
   const navItems = activePersona === 'tech' ? techNavItems : creativeNavItems;
+  const activeCvUrl =
+    activePersona === 'tech'
+      ? profile.techCvPath || profile.cvPath
+      : profile.creativeCvPath || profile.cvPath;
 
   return (
     <AnimatePresence>
@@ -114,9 +118,17 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
                 />
                 <div className="min-w-0 flex-1">
                   <h4 className="font-extrabold text-xs sm:text-sm text-[var(--text-primary)] truncate">{profile.name}</h4>
-                  <div className="mt-0.5 inline-flex items-center gap-1 text-[10px] font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-md border border-emerald-500/20">
-                    <Sparkles className="w-2.5 h-2.5" />
-                    <span>Available</span>
+                  <div className="mt-1 flex flex-wrap items-center gap-1">
+                    <div className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-md border border-emerald-500/20">
+                      <Sparkles className="w-2.5 h-2.5" />
+                      <span>Available</span>
+                    </div>
+                    {profile.militaryStatus && (
+                      <div className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--text-secondary)] bg-[var(--bg-secondary)] px-1.5 py-0.5 rounded-md border border-[var(--border)]">
+                        <ShieldCheck className="w-2.5 h-2.5 text-emerald-500" />
+                        <span>Military Completed</span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -156,15 +168,15 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
 
             {/* Bottom Actions */}
             <div className="pt-3 border-t border-[var(--border)] flex flex-col gap-3">
-              {profile.cvPath ? (
+              {activeCvUrl ? (
                 <a
-                  href={profile.cvPath}
+                  href={activeCvUrl}
                   download
                   onClick={onClose}
                   className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--accent-blue)] text-white shadow-md"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  <span>Download CV</span>
+                  <span>{activePersona === 'tech' ? 'Download Tech CV' : 'Download Media Kit'}</span>
                 </a>
               ) : (
                 <a

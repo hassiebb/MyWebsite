@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, Calendar, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, Award, Calendar, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from '../../common/SectionHeading';
 import { Card } from '../../common/Card';
@@ -79,6 +79,40 @@ export const TechEducation: React.FC<TechEducationProps> = ({ education }) => {
             </Card>
           </motion.div>
         ))}
+
+        {/* Military Service Credential Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.15 }}
+          className="w-full max-w-full min-w-0"
+        >
+          <Card glow="blue" className="w-full max-w-full min-w-0 p-5 sm:p-7">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div className="flex items-start gap-2.5 sm:gap-3.5 min-w-0 max-w-full">
+                <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex-shrink-0">
+                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="min-w-0 max-w-full">
+                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text-primary)] break-words">
+                    Military Service
+                  </h3>
+                  <p className="text-sm sm:text-base font-semibold text-[var(--text-secondary)] mt-0.5 break-words">
+                    Egyptian Armed Forces <span className="text-xs font-normal text-[var(--text-muted)]">· National Service Status</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap sm:flex-col sm:items-end gap-1 text-[11px] sm:text-xs text-[var(--text-muted)] font-medium">
+                <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">
+                  <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>Completed</span>
+                </span>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );

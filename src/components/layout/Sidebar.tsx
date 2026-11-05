@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Sparkles } from 'lucide-react';
+import { Download, ShieldCheck, Sparkles } from 'lucide-react';
 import { SocialIcons } from '../common/SocialIcons';
 import { Profile, Persona } from '../../types/portfolio';
 import { cn } from '../../utils/cn';
@@ -13,8 +13,8 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ profile, activePersona, activeSection }) => {
   const techNavItems = [
     { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Tech Stack' },
+    { id: 'projects', label: 'Web & Mobile Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' },
@@ -22,15 +22,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ profile, activePersona, active
 
   const creativeNavItems = [
     { id: 'creative-about', label: 'About' },
-    { id: 'creative-work', label: 'Creative Work' },
-    { id: 'photography', label: 'Photography' },
-    { id: 'achievements', label: 'Achievements' },
+    { id: 'social-media', label: 'Social Media Growth' },
+    { id: 'photography', label: 'Sports Photography' },
+    { id: 'graphic-design', label: 'Graphic Design' },
     { id: 'creative-experience', label: 'Experience' },
-    { id: 'creative-tools', label: 'Tools & Media' },
+    { id: 'creative-tools', label: 'Tools & Gear' },
     { id: 'creative-contact', label: 'Contact' },
   ];
 
   const navItems = activePersona === 'tech' ? techNavItems : creativeNavItems;
+  const activeCvUrl =
+    activePersona === 'tech'
+      ? profile.techCvPath || profile.cvPath
+      : profile.creativeCvPath || profile.cvPath;
 
   return (
     <aside className="hidden lg:flex fixed top-18 left-0 bottom-0 w-64 bg-[var(--surface)] border-r border-[var(--border)] p-6 flex-col justify-between z-30 transition-all duration-300 overflow-y-auto">
@@ -45,7 +49,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ profile, activePersona, active
               height={96}
               className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
               onError={(e) => {
-                // Fallback if avatar fails to load
                 (e.target as HTMLElement).style.display = 'none';
               }}
             />
@@ -66,9 +69,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ profile, activePersona, active
           {activePersona === 'tech' ? profile.techTitle : profile.creativeTitle}
         </p>
 
-        <div className="mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-          <Sparkles className="w-3 h-3" />
-          <span>Available for hire</span>
+        <div className="mt-3 flex flex-col items-center gap-1.5">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            <Sparkles className="w-3 h-3" />
+            <span>Available for hire</span>
+          </div>
+          {profile.militaryStatus && (
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-[var(--bg-secondary)] text-[var(--text-secondary)] border border-[var(--border)]">
+              <ShieldCheck className="w-3 h-3 text-emerald-500" />
+              <span>{profile.militaryStatus}</span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -105,18 +116,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ profile, activePersona, active
 
       {/* Bottom Section: CV & Social Icons */}
       <div className="flex flex-col gap-4 pt-4 border-t border-[var(--border)]">
-        {profile.cvPath ? (
+        {activeCvUrl ? (
           <a
-            href={profile.cvPath}
+            href={activeCvUrl}
             download
             className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--accent-blue)] hover:bg-[var(--accent-blue-hover)] text-white shadow-md transition-all duration-200 hover:-translate-y-0.5"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Download CV</span>
+            <span>{activePersona === 'tech' ? 'Download Tech CV' : 'Download Media Kit'}</span>
           </a>
         ) : (
           <a
-            href={`mailto:${profile.email}?subject=Resume%20Request%20-%20Mohammad%20Hassieb`}
+            href={`mailto:${profile.email}?subject=${encodeURIComponent(
+              activePersona === 'tech'
+                ? 'Tech Resume Request - Mohammad Hassieb'
+                : 'Creative Portfolio / CV Request - Mohammad Hassieb'
+            )}`}
             className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-semibold bg-[var(--bg-secondary)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border)] transition-all duration-200"
           >
             <Download className="w-3.5 h-3.5 text-[var(--accent-blue)]" />

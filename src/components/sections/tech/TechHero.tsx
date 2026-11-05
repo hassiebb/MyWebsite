@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, Phone, ArrowDown, FolderCode, Send, Terminal, Code2 } from 'lucide-react';
+import { MapPin, Mail, Phone, ArrowDown, FolderCode, Send, Terminal, Code2, Smartphone, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SocialIcons } from '../../common/SocialIcons';
 import { Button } from '../../common/Button';
@@ -11,8 +11,15 @@ interface TechHeroProps {
 }
 
 export const TechHero: React.FC<TechHeroProps> = ({ profile, aboutText }) => {
-  const highlightSkills = ['React', 'Next.js', 'TypeScript', 'Full-stack Web Development', 'SAP ABAP', 'Supabase / PostgreSQL'];
-
+  const highlightSkills = [
+    'React & Next.js',
+    'React Native & Expo',
+    'TypeScript',
+    'Tailwind CSS',
+    'Supabase & PostgreSQL',
+    'Firebase',
+    'SAP ABAP',
+  ];
 
   return (
     <section id="about" className="pt-6 sm:pt-14 pb-10 sm:pb-20 relative overflow-hidden w-full max-w-full">
@@ -50,13 +57,20 @@ export const TechHero: React.FC<TechHeroProps> = ({ profile, aboutText }) => {
         >
           <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-mono font-medium bg-[var(--bg-secondary)] text-[var(--text-secondary)] border border-[var(--border)] shadow-xs max-w-full truncate">
             <Terminal className="w-3.5 h-3.5 text-blue-500 flex-shrink-0" />
-            <span className="truncate">status: ready_for_engineering</span>
+            <span className="truncate">web_and_mobile: ready</span>
           </div>
 
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex-shrink-0">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Open to Opportunities</span>
+            <span>Open to Web & Mobile Roles</span>
           </span>
+
+          {profile.militaryStatus && (
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 flex-shrink-0">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>{profile.militaryStatus}</span>
+            </span>
+          )}
         </motion.div>
 
         {/* Main Heading */}
@@ -75,6 +89,7 @@ export const TechHero: React.FC<TechHeroProps> = ({ profile, aboutText }) => {
           <p className="mt-1.5 text-lg sm:text-2xl font-bold text-[var(--text-secondary)] flex items-center gap-2 flex-wrap">
             <Code2 className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0" />
             <span>{profile.techTitle}</span>
+            <Smartphone className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-500 flex-shrink-0" />
           </p>
         </motion.div>
 
@@ -144,7 +159,7 @@ export const TechHero: React.FC<TechHeroProps> = ({ profile, aboutText }) => {
           className="flex flex-wrap items-center gap-2.5 pt-2 max-w-full"
         >
           <Button href="#projects" variant="primary" size="sm" icon={<FolderCode className="w-4 h-4" />}>
-            View Featured Projects
+            Web & Mobile Projects
           </Button>
 
           <Button href="#contact" variant="secondary" size="sm" icon={<Send className="w-4 h-4" />}>
@@ -152,7 +167,7 @@ export const TechHero: React.FC<TechHeroProps> = ({ profile, aboutText }) => {
           </Button>
 
           <Button href="#skills" variant="ghost" size="sm" icon={<ArrowDown className="w-4 h-4" />}>
-            Explore Skills
+            Explore Tech Stack
           </Button>
         </motion.div>
 

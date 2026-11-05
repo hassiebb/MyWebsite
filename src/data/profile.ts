@@ -4,18 +4,21 @@ export const profileData: Profile = {
   name: 'Mohammad Hassieb',
   firstName: 'Mohammad',
   lastName: 'Hassieb',
-  techTitle: 'Software Engineer & Developer',
-  creativeTitle: 'Sports Media & Social Media',
+  techTitle: 'Web & Mobile App Developer',
+  creativeTitle: 'Social Media Specialist · Sports Photographer · Graphic Designer',
   location: 'Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo, Egypt',
   phone: '+20 01211494107',
   email: 'mohammadhassieb@gmail.com',
   avatarUrl: '/avatar.png',
-  cvPath: null, // Set to path when PDF is provided (e.g. '/documents/Mohammad-Hassieb-Resume.pdf')
+  cvPath: null, // Fallback CV path
+  techCvPath: null, // Set to '/documents/Mohammad-Hassieb-Tech-CV.pdf' when ready
+  creativeCvPath: null, // Set to '/documents/Mohammad-Hassieb-Creative-Portfolio.pdf' when ready
   availableForHire: true,
+  militaryStatus: 'Military Service Completed',
   social: [
     {
       platform: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/mo-hassieb/',
+      url: 'www.linkedin.com/in/mohammadhassieb',
       label: 'Connect on LinkedIn',
       icon: 'linkedin',
     },
@@ -33,7 +36,7 @@ export const profileData: Profile = {
     },
     {
       platform: 'Instagram',
-      url: 'https://www.instagram.com/mhassieb_/',
+      url: 'https://www.instagram.com/mhassiebb/',
       label: 'Follow on Instagram',
       icon: 'instagram',
     },
@@ -45,4 +48,3 @@ export const profileData: Profile = {
     },
   ],
 };
-

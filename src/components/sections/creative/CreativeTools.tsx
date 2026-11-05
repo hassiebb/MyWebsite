@@ -1,5 +1,5 @@
 import React from 'react';
-import { PenTool, Film, Palette, Monitor } from 'lucide-react';
+import { PenTool, Film, Palette, Share2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from '../../common/SectionHeading';
 import { Card } from '../../common/Card';
@@ -10,20 +10,20 @@ interface CreativeToolsProps {
   tools: SkillTool[];
 }
 
-export const CreativeTools: React.FC<CreativeToolsProps> = ({ categories }) => {
+export const CreativeTools: React.FC<CreativeToolsProps> = ({ categories, tools }) => {
   const getCategoryIcon = (name: string) => {
     const n = name.toLowerCase();
-    if (n.includes('design') || n.includes('visual')) return <PenTool className="w-5 h-5 text-purple-500" />;
-    if (n.includes('photo') || n.includes('camera')) return <Palette className="w-5 h-5 text-pink-500" />;
-    if (n.includes('video') || n.includes('media')) return <Film className="w-5 h-5 text-indigo-500" />;
-    return <Monitor className="w-5 h-5 text-emerald-500" />;
+    if (n.includes('social')) return <Share2 className="w-5 h-5 text-purple-500" />;
+    if (n.includes('photo')) return <Palette className="w-5 h-5 text-pink-500" />;
+    if (n.includes('design') || n.includes('brand')) return <PenTool className="w-5 h-5 text-amber-500" />;
+    return <Film className="w-5 h-5 text-indigo-500" />;
   };
 
   return (
     <section id="creative-tools" className="py-10 sm:py-16 border-t border-[var(--border)] w-full max-w-full min-w-0 overflow-hidden">
       <SectionHeading
-        title="Creative Suite & Software Arsenal"
-        subtitle="Professional digital design software, video post-production tools, and photography hardware."
+        title="Creative Suite & Production Arsenal"
+        subtitle="Professional design software, post-production suites, social management workflows, and photography gear."
         badge="Software & Tools"
         badgeVariant="purple"
         icon={<PenTool className="w-4 h-4" />}
@@ -65,6 +65,29 @@ export const CreativeTools: React.FC<CreativeToolsProps> = ({ categories }) => {
           </motion.div>
         ))}
       </div>
+
+      {/* Creative Software Strip */}
+      {tools && tools.length > 0 && (
+        <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)]">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] mb-3">
+            Primary Production Toolkit
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {tools.map((tool) => (
+              <span
+                key={tool.name}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--bg-secondary)] text-[var(--text-primary)] border border-[var(--border)]"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                <span>{tool.name}</span>
+                {tool.category && (
+                  <span className="text-[10px] font-normal text-[var(--text-muted)]">· {tool.category}</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

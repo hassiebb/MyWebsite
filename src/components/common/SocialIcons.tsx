@@ -1,5 +1,14 @@
 import React from 'react';
-import { FaLinkedinIn, FaGithub, FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa6';
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaWhatsapp,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+  FaFacebookF,
+  FaBehance,
+} from 'react-icons/fa6';
 import { SocialLink } from '../../types/portfolio';
 import { cn } from '../../utils/cn';
 
@@ -17,6 +26,9 @@ export const SocialIcons: React.FC<SocialIconsProps> = ({ socials, variant = 'si
     if (p.includes('whatsapp')) return <FaWhatsapp className="w-4 h-4" />;
     if (p.includes('instagram')) return <FaInstagram className="w-4 h-4" />;
     if (p.includes('youtube')) return <FaYoutube className="w-4 h-4" />;
+    if (p.includes('tiktok')) return <FaTiktok className="w-4 h-4" />;
+    if (p.includes('facebook')) return <FaFacebookF className="w-4 h-4" />;
+    if (p.includes('behance')) return <FaBehance className="w-4 h-4" />;
     return null;
   };
 

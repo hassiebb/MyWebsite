@@ -15,9 +15,9 @@ import { TechContact } from './components/sections/tech/TechContact';
 
 // Creative Sections
 import { CreativeHero } from './components/sections/creative/CreativeHero';
-import { CreativeWork } from './components/sections/creative/CreativeWork';
+import { SocialMediaSection } from './components/sections/creative/SocialMediaSection';
 import { PhotographySection } from './components/sections/creative/PhotographySection';
-import { AchievementsSection } from './components/sections/creative/AchievementsSection';
+import { GraphicDesignSection } from './components/sections/creative/GraphicDesignSection';
 import { CreativeExperience } from './components/sections/creative/CreativeExperience';
 import { CreativeTools } from './components/sections/creative/CreativeTools';
 import { CreativeContact } from './components/sections/creative/CreativeContact';
@@ -33,12 +33,15 @@ import {
   techEducation,
   projectsData,
   creativeAbout,
-  creativeIntro,
+  socialMediaIntro,
   photographyIntro,
+  graphicDesignIntro,
+  socialMediaCaseStudies,
   creativeAchievements,
   creativeExperience,
   creativeSkills,
   creativeGallery,
+  graphicDesignGallery,
 } from './data';
 import { Persona } from './types/portfolio';
 
@@ -50,9 +53,9 @@ export function App() {
   const techSectionIds = ['about', 'skills', 'projects', 'experience', 'education', 'contact'];
   const creativeSectionIds = [
     'creative-about',
-    'creative-work',
+    'social-media',
     'photography',
-    'achievements',
+    'graphic-design',
     'creative-experience',
     'creative-tools',
     'creative-contact',
@@ -67,15 +70,13 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Reset scroll when switching personas
+  // Sync document title based on persona
   useEffect(() => {
-    // Sync document title based on persona
     document.title =
       activePersona === 'tech'
-        ? 'Mohammad Hassieb | Software Engineer & Developer'
-        : 'Mohammad Hassieb | Sports Media & Social Media';
+        ? 'Mohammad Hassieb | Web & Mobile App Developer'
+        : 'Mohammad Hassieb | Social Media, Sports Photography & Graphic Design';
   }, [activePersona]);
-
 
   return (
     <div
@@ -128,7 +129,7 @@ export function App() {
                 <TechEducation education={techEducation} />
                 <TechContact
                   profile={profileData}
-                  ctaText="Open to full-time software engineering roles, frontend consulting, and technical collaborations."
+                  ctaText="Open to full-time Web & Mobile engineering roles, freelance app development, and technical consulting."
                 />
               </motion.div>
             ) : (
@@ -141,14 +142,18 @@ export function App() {
                 className="w-full max-w-full min-w-0"
               >
                 <CreativeHero profile={profileData} aboutText={creativeAbout} />
-                <CreativeWork introText={creativeIntro} />
+                <SocialMediaSection
+                  introText={socialMediaIntro}
+                  caseStudies={socialMediaCaseStudies}
+                  achievements={creativeAchievements}
+                />
                 <PhotographySection introText={photographyIntro} gallery={creativeGallery} />
-                <AchievementsSection achievements={creativeAchievements} />
+                <GraphicDesignSection introText={graphicDesignIntro} designs={graphicDesignGallery} />
                 <CreativeExperience experience={creativeExperience} />
                 <CreativeTools categories={creativeSkills.categories} tools={creativeSkills.tools} />
                 <CreativeContact
                   profile={profileData}
-                  ctaText="Open to live game coverage contracts, sports branding assignments, and creative media collaborations."
+                  ctaText="Open to social media management retainers, live tournament photography, and sports graphic design commissions."
                 />
               </motion.div>
             )}

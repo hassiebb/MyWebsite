@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Layers, Cpu, Wrench } from 'lucide-react';
+import { Code2, Globe, Smartphone, Database, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from '../../common/SectionHeading';
 import { Card } from '../../common/Card';
@@ -10,20 +10,20 @@ interface TechSkillsProps {
   tools: SkillTool[];
 }
 
-export const TechSkills: React.FC<TechSkillsProps> = ({ categories }) => {
+export const TechSkills: React.FC<TechSkillsProps> = ({ categories, tools }) => {
   const getCategoryIcon = (name: string) => {
     const n = name.toLowerCase();
-    if (n.includes('programming') || n.includes('language')) return <Code2 className="w-5 h-5 text-blue-500" />;
-    if (n.includes('framework') || n.includes('frontend')) return <Layers className="w-5 h-5 text-indigo-500" />;
-    if (n.includes('sap') || n.includes('enterprise')) return <Cpu className="w-5 h-5 text-sky-500" />;
+    if (n.includes('web')) return <Globe className="w-5 h-5 text-blue-500" />;
+    if (n.includes('mobile')) return <Smartphone className="w-5 h-5 text-indigo-500" />;
+    if (n.includes('backend') || n.includes('data')) return <Database className="w-5 h-5 text-sky-500" />;
     return <Wrench className="w-5 h-5 text-amber-500" />;
   };
 
   return (
     <section id="skills" className="py-10 sm:py-16 border-t border-[var(--border)] w-full max-w-full min-w-0 overflow-hidden">
       <SectionHeading
-        title="Technical Skills & Competencies"
-        subtitle="Core programming languages, enterprise SAP development, modern frontend toolkits, and development workflows."
+        title="Web & Mobile Tech Stack"
+        subtitle="Modern frontend web frameworks, cross-platform mobile development with React Native & Expo, cloud backends, and enterprise tooling."
         badge="Skills Matrix"
         badgeVariant="blue"
         icon={<Code2 className="w-4 h-4" />}
@@ -65,6 +65,29 @@ export const TechSkills: React.FC<TechSkillsProps> = ({ categories }) => {
           </motion.div>
         ))}
       </div>
+
+      {/* Core Tooling Strip */}
+      {tools && tools.length > 0 && (
+        <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)]">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] mb-3">
+            Daily Engineering Toolkit
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {tools.map((tool) => (
+              <span
+                key={tool.name}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-[var(--bg-secondary)] text-[var(--text-primary)] border border-[var(--border)]"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span>{tool.name}</span>
+                {tool.category && (
+                  <span className="text-[10px] font-normal text-[var(--text-muted)]">· {tool.category}</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

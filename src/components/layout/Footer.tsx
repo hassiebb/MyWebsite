@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Heart } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { Profile } from '../../types/portfolio';
 
 interface FooterProps {
@@ -16,11 +16,9 @@ export const Footer: React.FC<FooterProps> = ({ profile }) => {
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left w-full min-w-0">
         <div className="flex flex-col gap-1 min-w-0">
           <p className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] break-words">
-            {profile.name} — Portfolio & CV
+            {profile.name} — Portfolio & CV  
           </p>
-          <p className="text-[11px] sm:text-xs text-[var(--text-muted)] flex items-center justify-center sm:justify-start gap-1">
-            Built with React 19, TypeScript & Tailwind CSS <Heart className="w-3 h-3 text-red-500 fill-red-500 flex-shrink-0" />
-          </p>
+
         </div>
 
         <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
