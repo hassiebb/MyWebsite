@@ -9,7 +9,7 @@ import {
 } from '../types/portfolio';
 
 export const creativeAbout =
-  'Social Media Specialist, Sports Photographer, and Graphic Designer managing official national sports federations — the Egyptian Table Tennis Federation (ETTF) and the Egyptian Volleyball Federation (EVBF) — alongside founding and scaling sports digital brands. Specialized in 5-platform social strategy (Facebook, Instagram, X, YouTube, TikTok), courtside action photography, and high-impact sports graphic design — driving 10M+ cumulative views and rapid community growth.';
+  'Sports Media Specialist, Social Media Manager, Sports Photographer, and Graphic Designer managing official national sports federations — the Egyptian Table Tennis Federation (ETTF) and the Egyptian Volleyball Federation (EVBF) — alongside founding and scaling Full Court (@fullcourt.eg). Specialized in 5-platform social strategy (Facebook, Instagram, X, YouTube, TikTok), courtside action photography, and high-impact sports graphic design — driving 15M+ Instagram views, 5M+ Facebook views, and rapid community growth.';
 
 export const socialMediaIntro =
   'Official social media management for national sports federations (ETTF & EVBF) and digital sports brands — delivering multi-platform content strategy, short-form Reels/TikTok production, and real-time championship coverage.';
@@ -25,10 +25,10 @@ export const socialMediaCaseStudies: SocialMediaCaseStudy[] = [
   {
     id: 'ettf-social',
     brand: 'Egyptian Table Tennis Federation (ETTF)',
-    role: 'Social Media Manager',
+    role: 'Social Media Manager / Specialist',
     period: 'August 2026 - Present',
     summary:
-      'Managing the official digital presence of the Egyptian Table Tennis Federation across 5 social media platforms (Facebook, Instagram, X, YouTube, and TikTok). Took over the accounts with 24K Facebook followers and 500 Instagram followers, scaling them to 40K+ on Facebook and 3K+ on Instagram through real-time tournament coverage, short-form Reels/TikToks, and unified visual branding.',
+      'Managing the official digital presence of the Egyptian Table Tennis Federation across 5 social media platforms (Facebook, Instagram, X, YouTube, and TikTok). Took over the accounts with 24K Facebook followers and 500 Instagram followers, scaling them to 40K+ on Facebook and 3K+ on Instagram, and producing a viral Reel that reached 2.2M+ views within the first week.',
     platforms: ['Facebook', 'Instagram', 'X', 'YouTube', 'TikTok'],
     metrics: [
       { label: 'Facebook Followers', value: '40K+', growth: 'Up from 24K' },
@@ -38,8 +38,14 @@ export const socialMediaCaseStudies: SocialMediaCaseStudy[] = [
     strategyHighlights: [
       'Grew official Facebook audience from 24,000 to 40,000+ followers since August 2026',
       'Scaled official Instagram community 6x from 500 to 3,000+ active followers',
+      'Produced a breakout Reel that reached 2.2M+ views within the first week of joining ETTF',
       'Responsible for end-to-end management across 5 official platforms: Facebook, Instagram, X, YouTube, and TikTok',
-      'Directed real-time national & international championship coverage, match graphics, and short-form video highlights',
+    ],
+    links: [
+      { label: 'Instagram (@ettf_eg)', url: 'https://www.instagram.com/ettf_eg/' },
+      { label: 'Facebook', url: 'https://www.facebook.com/Ettf.eg' },
+      { label: 'TikTok (@ettf.eg)', url: 'https://www.tiktok.com/@ettf.eg' },
+      { label: 'YouTube (@ETTF)', url: 'https://www.youtube.com/@ETTF-EG' },
     ],
     featured: true,
   },
@@ -66,28 +72,28 @@ export const socialMediaCaseStudies: SocialMediaCaseStudy[] = [
   },
   {
     id: 'full-court-social',
-    brand: 'Full Court Media',
-    role: 'Founder, Social Media Manager & Creative Director',
-    period: 'Active (6+ Months)',
+    brand: 'Full Court (@fullcourt.eg)',
+    role: 'Founder & Sports Media Director',
+    period: 'Feb 2026 - Present',
     summary:
-      'Built and scaled Full Court from zero into a flagship Egyptian basketball digital media platform. Directed the entire content pipeline including Reels strategy, live match coverage, courtside photography, and branded visual templates across Instagram and Facebook.',
+      'Built and scaled Full Court from zero into a flagship Egyptian basketball media platform. Grown to 10K+ followers on both Instagram and Facebook, generating 15M+ Instagram views and 5M+ Facebook views in 6 months while coordinating a multi-court media team and partnering with NBA Jr. Egypt, EBF, Cairo & Giza Zones, and NBA Outlet.',
     platforms: ['Instagram', 'Facebook', 'TikTok'],
     metrics: [
-      { label: 'Instagram Community', value: '10K+', growth: 'Built from 0' },
-      { label: 'Facebook Community', value: '10K+', growth: 'Organic Growth' },
-      { label: 'Cumulative IG Views', value: '~10M', growth: 'In 6+ Months' },
+      { label: 'IG & FB Community', value: '10K+', growth: 'On Both Platforms' },
+      { label: 'Instagram Views', value: '15M+', growth: 'In 6 Months' },
+      { label: 'Facebook Views', value: '5M+', growth: 'Organic Reach' },
     ],
     strategyHighlights: [
-      'Engineered short-form Reels & highlight workflows optimized for high retention and shareability',
-      'Established consistent visual branding for match results, player spotlights, and breaking news',
-      'Produced exclusive player & referee interviews that pioneered new basketball content formats in Egypt',
-      'Managed real-time game-day publishing schedules across Instagram and Facebook simultaneously',
+      'Built the platform to 10K+ followers on Instagram and Facebook, generating 15M+ IG views and 5M+ FB views',
+      'Lead game and tournament coverage including photography, social media, graphics, Reels, Stories, and written content',
+      'Manage and coordinate a media team across multiple courts and simultaneous games',
+      'Key partnerships: NBA Jr. Egypt, Egyptian Basketball Federation, Cairo & Giza Basketball Zones, NBA Outlet, and Champiqo',
     ],
     links: [
-      // Add your direct Full Court Instagram / Facebook URLs here
-      { label: 'Instagram Profile', url: 'ht tps://www.instagram.com/mhassieb/' },
+      { label: 'Instagram (@fullcourt.eg)', url: 'https://www.instagram.com/fullcourt.eg/' },
+      { label: 'Facebook', url: 'https://www.facebook.com/FullCourtEG' },
     ],
-    featured: true, 
+    featured: true,
     // image: '/creative/social/full-court-case.png',
   },
   {
@@ -140,9 +146,23 @@ export const creativeAchievements: AchievementItem[] = [
   },
   {
     id: 'fullcourt-views',
-    title: '~10M Cumulative Instagram Views',
-    description: 'Generated approximately 10 million cumulative Instagram views across match coverage, photography reels, and basketball highlights in 6+ months.',
-    metric: '~10M Views',
+    title: '15M+ IG Views & 5M+ FB Views on Full Court',
+    description: 'Generated 15M+ Instagram views and 5M+ Facebook views across match coverage, photography reels, and basketball highlights in 6 months.',
+    metric: '20M+ Total Views',
+    highlight: true,
+  },
+  {
+    id: 'ettf-viral-reel',
+    title: '2.2M+ Views on a Single ETTF Reel',
+    description: 'Produced a viral table tennis Reel that reached 2.2M+ views within the first week of joining the Egyptian Table Tennis Federation.',
+    metric: '2.2M+ Reel Views',
+    highlight: true,
+  },
+  {
+    id: 'nba-jr-egypt',
+    title: 'Official Media Coverage for NBA Jr. Egypt',
+    description: 'Officially invited by the Egyptian organizers to cover the NBA Jr. Egypt event — delivering event photography, Stories, graphics, and interviews.',
+    metric: 'NBA Jr. Egypt',
     highlight: true,
   },
   {
@@ -275,7 +295,7 @@ export const graphicDesignGallery: GraphicDesignItem[] = [
 export const creativeExperience: ExperienceItem[] = [
   {
     id: 'ettf-social-manager',
-    title: 'Social Media Manager',
+    title: 'Social Media Manager / Specialist',
     company: 'Egyptian Table Tennis Federation (ETTF)',
     type: 'National Sports Federation',
     period: 'August 2026 - Present',
@@ -284,15 +304,15 @@ export const creativeExperience: ExperienceItem[] = [
       'Leading the official digital presence and multi-platform social strategy for the Egyptian Table Tennis Federation (ETTF) across 5 platforms (Facebook, Instagram, X, YouTube, and TikTok). Took over the channels in August 2026 with 24K Facebook followers and 500 Instagram followers, scaling them to 40K+ on Facebook and 3K+ on Instagram.',
     highlights: [
       'Scaled official Facebook audience from 24K to 40K+ followers and Instagram from 500 to 3K+ followers since August 2026',
+      'Produced a viral Reel that reached 2.2M+ views within the first week of joining ETTF',
       'Directly responsible for managing 5 official social media platforms: Facebook, Instagram, X, YouTube, and TikTok',
       'Executed real-time national and international tournament coverage, match-day graphics, and short-form video reels',
-      'Built consistent publishing workflows and cross-platform content calendars tailored to table tennis fans and athletes',
     ],
     skills: ['Social Media Management', 'Facebook', 'Instagram', 'X (Twitter)', 'YouTube', 'TikTok', 'Audience Growth', 'Federation Media'],
   },
   {
     id: 'evbf-social-manager',
-    title: 'Social Media Manager',
+    title: 'Social Media Manager / Specialist',
     company: 'Egyptian Volleyball Federation (EVBF)',
     type: 'National Sports Federation',
     period: 'November 2026 - Present',
@@ -308,20 +328,20 @@ export const creativeExperience: ExperienceItem[] = [
   },
   {
     id: 'full-court-media',
-    title: 'Founder, Social Media Manager & Creative Director',
-    company: 'Full Court',
+    title: 'Founder & Sports Media Director',
+    company: 'Full Court (@fullcourt.eg)',
     type: 'Digital Media Brand',
-    period: 'Active (6+ months)',
-    location: 'Egypt',
+    period: 'Feb 2026 - Present',
+    location: 'Cairo, Egypt',
     description:
-      'Built and developed Full Court into a flagship basketball media brand covering tournaments, teams, players, and basketball events across Egypt. Managed courtside sports photography, graphic design, short-form video/Reels production, player interviews, match coverage, and social strategy — scaling the platform to 10K+ followers on both Instagram and Facebook and ~10M cumulative Instagram views in its first 6+ months.',
+      'Built and developed Full Court into a flagship basketball media platform covering tournaments, teams, players, and basketball events across Egypt. Grown to 10K+ followers on both Instagram and Facebook, generating 15M+ Instagram views and 5M+ Facebook views in 6 months.',
     highlights: [
-      'Founded and operated Full Court, a basketball media & content platform covering Egyptian leagues and tournaments',
-      'Built and cultivated active sports community beyond 10K followers on both Instagram and Facebook',
-      'Generated approximately 10M cumulative Instagram views within 6+ months of active publishing',
-      'Directed courtside sports photography, match-day graphics, short-form video/Reels, player interviews, and commercial brand collaborations',
+      'Built the platform to 10K+ followers on Instagram and Facebook, generating 15M+ Instagram views and 5M+ Facebook views in 6 months',
+      'Lead game and tournament coverage including photography, social media, graphics, Reels, Stories, and written content',
+      'Manage and coordinate a media team across multiple courts and simultaneous games',
+      'Key partnerships: NBA Jr. Egypt, Egyptian Basketball Federation, Cairo Basketball Zone, Giza Basketball Zone, NBA Outlet, and Champiqo',
     ],
-    skills: ['Social Media Strategy', 'Sports Photography', 'Graphic Design', 'Reels / TikTok', 'Audience Growth', 'Brand Direction'],
+    skills: ['Social Media Strategy', 'Sports Photography', 'Graphic Design', 'Reels / TikTok', 'Team Coordination', 'Brand Partnerships'],
   },
   {
     id: 'giza-basketball-zone',
@@ -376,16 +396,18 @@ export const creativeSkills: {
       items: ['Match-Day Posters', 'Starting Lineups & Scoreboards', 'Athlete Visual Identities', 'Tournament Branding Packages', 'Typography & Compositing'],
     },
     {
-      name: 'Creative Software & Gear',
-      items: ['Adobe Photoshop', 'DaVinci Resolve', 'Canva Pro', 'DSLR / Mirrorless Sports Rig', 'Studio & Arena Lighting'],
+      name: 'Creative Software & Analytics',
+      items: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe Lightroom', 'Adobe Premiere Pro', 'After Effects', 'DaVinci Resolve', 'CapCut', 'Canva', 'Figma', 'Meta Business Suite'],
     },
   ],
   tools: [
-    { name: 'Adobe Photoshop', icon: 'photoshop', category: 'Graphic Design' },
-    { name: 'DaVinci Resolve', icon: 'davinci', category: 'Video Editing' },
+    { name: 'Adobe Photoshop', icon: 'photoshop', category: 'Design & Photo' },
+    { name: 'Adobe Lightroom', icon: 'lightroom', category: 'Photography' },
+    { name: 'Premiere Pro & After Effects', icon: 'premiere', category: 'Video' },
+    { name: 'DaVinci Resolve & CapCut', icon: 'davinci', category: 'Video Editing' },
+    { name: 'Illustrator & Figma', icon: 'illustrator', category: 'Design' },
     { name: 'Canva Pro', icon: 'canva', category: 'Fast Turnaround' },
-    { name: 'Instagram Reels', icon: 'instagram', category: 'Social Media' },
-    { name: 'TikTok Studio', icon: 'tiktok', category: 'Social Media' },
-    { name: 'Sports Camera Rig', icon: 'camera', category: 'Photography' },
+    { name: 'Meta Business Suite', icon: 'meta', category: 'Social Media' },
+    { name: 'IG · FB · TikTok Analytics', icon: 'analytics', category: 'Growth' },
   ],
 };

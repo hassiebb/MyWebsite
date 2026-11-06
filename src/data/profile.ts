@@ -6,13 +6,13 @@ export const profileData: Profile = {
   lastName: 'Hassieb',
   techTitle: 'Web & Mobile App Developer',
   creativeTitle: 'Social Media Specialist · Sports Photographer · Graphic Designer',
-  location: 'Makka al Mokarma Street · Hadaaiek Al Kobba, Cairo, Egypt',
+  location: 'Hadaaiek Al Kobba, Cairo, Egypt',
   phone: '+20 01211494107',
   email: 'mohammadhassieb@gmail.com',
   avatarUrl: '/avatar.png',
-  cvPath: null, // Fallback CV path
-  techCvPath: null, // Set to '/documents/Mohammad-Hassieb-Tech-CV.pdf' when ready
-  creativeCvPath: null, // Set to '/documents/Mohammad-Hassieb-Creative-Portfolio.pdf' when ready
+  cvPath: '/documents/Mohammad-Hassieb-Tech-CV.pdf',
+  techCvPath: '/documents/Mohammad-Hassieb-Tech-CV.pdf',
+  creativeCvPath: '/documents/Mohammad-Hassieb-Creative-Portfolio.pdf',
   availableForHire: true,
   militaryStatus: 'Military Service Completed',
   social: [

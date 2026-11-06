@@ -111,8 +111,8 @@ export const CreativeHero: React.FC<CreativeHeroProps> = ({ profile, aboutText }
             <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Full Court IG & FB</span>
           </div>
           <div className="p-3 rounded-xl sm:rounded-2xl bg-[var(--surface)] border border-[var(--border)] shadow-xs">
-            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">10M+</span>
-            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Cumulative IG Views</span>
+            <span className="text-xl sm:text-2xl font-black text-purple-600 dark:text-purple-400 block">15M+</span>
+            <span className="text-[11px] sm:text-xs font-medium text-[var(--text-muted)]">Full Court IG Views</span>
           </div>
         </motion.div>
 

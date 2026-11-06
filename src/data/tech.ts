@@ -14,7 +14,7 @@ export const techSkills: {
     },
     {
       name: 'Mobile App Development',
-      items: ['React Native', 'Expo', 'Cross-Platform UI', 'Mobile Navigation', 'Native Device APIs', 'Mobile State Management'],
+      items: ['React Native', 'Expo', 'Flutter', 'React Navigation', 'Expo Libraries', 'Cross-Platform UI', 'Mobile State Management'],
     },
     {
       name: 'Backend & Database',
@@ -97,9 +97,9 @@ export const techEducation: EducationItem[] = [
   {
     degree: 'Bachelor of Computer Science',
     school: 'Modern University for Technology & Information (MTI)',
-    track: 'Computer Science Track',
+    track: 'Computer Science Track · Graduation Project: A',
     period: '2020 - 2024',
-    status: 'Graduated',
+    status: 'Graduated 2024',
     skills: ['Data Structures & Algorithms', 'Web Development', 'Mobile Computing', 'React & JavaScript', 'Database Systems', 'Software Engineering'],
   },
 ];

@@ -123,7 +123,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ profile, activePersona, active
             className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--accent-blue)] hover:bg-[var(--accent-blue-hover)] text-white shadow-md transition-all duration-200 hover:-translate-y-0.5"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>{activePersona === 'tech' ? 'Download Tech CV' : 'Download Media Kit'}</span>
+            <span>{activePersona === 'tech' ? 'Download Tech CV' : 'Download Media CV'}</span>
           </a>
         ) : (
           <a

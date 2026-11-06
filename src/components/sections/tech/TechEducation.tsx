@@ -105,7 +105,11 @@ export const TechEducation: React.FC<TechEducationProps> = ({ education }) => {
               </div>
 
               <div className="flex flex-wrap sm:flex-col sm:items-end gap-1 text-[11px] sm:text-xs text-[var(--text-muted)] font-medium">
-                <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">
+                <span className="inline-flex items-center gap-1">
+                  <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
+                  <span>2025 - 2026</span>
+                </span>
+                <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-0.5 rounded-md border border-emerald-500/20">
                   <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
                   <span>Completed</span>
                 </span>

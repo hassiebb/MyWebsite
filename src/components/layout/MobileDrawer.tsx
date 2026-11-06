@@ -176,7 +176,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
                   className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--accent-blue)] text-white shadow-md"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  <span>{activePersona === 'tech' ? 'Download Tech CV' : 'Download Media Kit'}</span>
+                  <span>{activePersona === 'tech' ? 'Download Tech CV' : 'Download Media CV'}</span>
                 </a>
               ) : (
                 <a
